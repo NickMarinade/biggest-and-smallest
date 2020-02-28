@@ -1,8 +1,13 @@
 function resetHandler() {
   debugger;
   // reset state to initial values
+  numbers.current = 0;
+  numbers.all = [];
 
   // re-render UI with values saved in state
+  document.getElementById('input').value = numbers.current;
+  document.getElementById('biggest').innerHTML = 'To be determined';
+  document.getElementById('smallest').innerHTML = 'To be determined';
 
   // log interaction: handler name, new state
   log.push({
